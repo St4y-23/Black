@@ -1,0 +1,33 @@
+html{
+	box-sizing: border-box;
+	font-size: 16px;
+}
+
+*, *::before, *::after{
+  box-sizing: inherit;
+}
+
+html, body{
+  height: 100%;
+}
+a{
+	display: inline-block;
+	text-decoration: none;
+	color: $text;
+}
+ul,
+li{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+button{
+	outline: none;
+}
+body{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	line-height: 1.5;
+	color: $text;
+	overflow-x: hidden;
+}
