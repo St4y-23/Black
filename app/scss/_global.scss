@@ -37,8 +37,15 @@ body {
   line-height: 1.5;
   color: #fff;
   overflow-x: hidden;
-  background-color: #000;
+  background-color: #131313;
   position: relative;
+}
+
+.img{
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 .hzline {
@@ -155,4 +162,41 @@ body {
   height: 20px;
   fill: #fff;
   transition: linear .2s;
+}
+
+// Title
+.wrapper{
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title{
+  font-size: rem(120);
+  font-weight: 700;
+}
+.subtitle{
+  font-size: rem(60);
+  font-weight: 700;
+  margin-top: -20px;
+  position: relative;
+  &::before{
+    position: absolute;
+    content: '';
+    width: 70px;
+    height: 3px;
+    top: 45px;
+    left: -110px;
+    background-color: #fff;
+  }
+  &::after{
+    position: absolute;
+    content: '';
+    width: 70px;
+    height: 3px;
+    top: 45px;
+    right: -110px;
+    background-color: #fff;
+  }
 }

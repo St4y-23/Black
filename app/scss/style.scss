@@ -126,6 +126,95 @@
   background: $pink;
 }
 
+// Works
+.works{
+  padding-top: 170px;
+  .grid{
+    z-index: -1;
+  }
+}
+.works__item{
+  display: flex;
+  margin-top: 150px;
+  margin-bottom: 100px;
+
+  &:hover{
+    .works__title{
+      color: $pink;
+      font-size: rem(120);
+    }
+    .works__slider{
+      transform: scale(1.1);
+    }
+  }
+}
+.works__col-left{
+  max-width: 25%;
+  flex: 0 0 25%;
+  z-index: 3;
+}
+
+.works__col-right{
+  max-width: 50%;
+  flex: 0 0 50%;
+}
+
+.works__info{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  margin-top: 100px;
+  padding-left: 120px;
+}
+.works__title{
+  font-size: rem(50);
+  font-weight: 700;
+  transition: ease .4s;
+}
+.works__text{
+  color: rgb(88, 85, 85);
+  span{
+    color: #fff;
+  }
+}
+.works__view{
+  display: flex;
+  margin-top: 50px;
+}
+.works__link{
+  transition: linear .2s;
+  position: relative;
+  padding-left: 70px;
+  &::before{
+    position: absolute;
+    content: '';
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    top: 50%;
+    left: 0;
+    transition: linear .2s;
+  }
+  &:hover{
+    color: $pink;
+    &::before{
+      background-color: $pink;
+    }
+  }
+}
+
+.works__slider{
+  width: 100%;
+  transition: ease .4s;
+}
+.works__wrapper{
+  width: 100%;
+}
+.works__slide{
+  width: 100%;
+  display: flex;
+}
+
 
 
 
