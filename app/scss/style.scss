@@ -2,6 +2,129 @@
 @import "global";
 @import "fonts";
 
+.header {
+  padding: 60px 60px 60px 120px;
+  position: fixed;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+  font-size: rem(30);
+  font-weight: 300;
+  transition: linear 0.2s;
+  span {
+    font-weight: 900;
+    font-size: rem(60);
+  }
+  .hzline {
+    margin: 0 20px;
+    transition: linear 0.2s;
+  }
+  &:hover {
+    color: $pink;
+    .hzline {
+      background-color: $pink;
+    }
+  }
+}
+
+// Fullpage
+.section {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 0 120px;
+}
+
+.fullpage-wrapper {
+  width: 100% !important;
+  transform: none !important;
+}
+
+.fp-section {
+  width: 100% !important;
+  position: absolute;
+  left: 0;
+  top: 0;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 0;
+  transition: all 0.7s ease-in-out;
+}
+
+.fp-section.active {
+  visibility: visible;
+  opacity: 1;
+  z-index: 1;
+}
+
+.section__box {
+  z-index: 2;
+  position: relative;
+  h3 {
+    font-size: rem(80);
+    line-height: 1;
+  }
+  span {
+    font-size: rem(50);
+    font-weight: 700;
+  }
+}
+.section__text {
+  margin-top: -15px;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  .hzline {
+    margin-right: 30px;
+    width: 65px;
+  }
+}
+.section__link-inner {
+  display: inline-block;
+}
+.section__link {
+  font-size: 0;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 2px solid $pink;
+  border-radius: 50px;
+  transition: linear 0.2s;
+  &:hover {
+    font-size: rem(18);
+    padding: 10px 20px;
+    .arrow__icon {
+      margin-left: 20px;
+    }
+  }
+}
+
+// Pagination fullpage
+#fp-nav{
+  margin-right: 30px !important;
+}
+
+#fp-nav ul li a span, .fp-slidesNav ul li a span{
+  background: #fff;
+  &:hover{
+    background: $pink;
+  }
+}
+
+#fp-nav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li a.active span, .fp-slidesNav ul li:hover a.active span{
+  background: $pink;
+}
 
 
 
@@ -11,5 +134,24 @@
 
 
 
+// Footer
+.footer{
+  padding: 30px 60px 60px 120px;
+  position: fixed;
+  width: 100%;
+  height: auto;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}
+.footer__inner{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer__text{
+  font-size: rem(20);
+  font-weight: 700;
+}
 
 @import "media";

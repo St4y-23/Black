@@ -1,33 +1,158 @@
-html{
-	box-sizing: border-box;
-	font-size: 16px;
+html {
+  box-sizing: border-box;
+  font-size: 18px;
 }
 
-*, *::before, *::after{
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
-html, body{
+html,
+body {
   height: 100%;
 }
-a{
-	display: inline-block;
-	text-decoration: none;
-	color: $text;
+h1,h2,h3,h4,h5,h6{
+  padding: 0;
+  margin: 0;
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: $text;
 }
 ul,
-li{
-	margin: 0;
-	padding: 0;
-	list-style: none;
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
-button{
-	outline: none;
+button {
+  outline: none;
 }
-body{
-	font-family: 'Roboto', sans-serif;
-	font-weight: 400;
-	line-height: 1.5;
-	color: $text;
-	overflow-x: hidden;
+body {
+  font-family: "GothamPro", sans-serif;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #fff;
+  overflow-x: hidden;
+  background-color: #000;
+  position: relative;
+}
+
+.hzline {
+  width: 50px;
+  height: 3px;
+  background-color: #fff;
+  display: inline-block;
+}
+
+.ham {
+  padding: 0 0 24px;
+  cursor: pointer;
+  .hamline {
+    width: 40px;
+    height: 3px;
+    background-color: #fff;
+    position: relative;
+    transition: linear 0.4s;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 30px;
+      height: 3px;
+      background-color: #fff;
+      top: 12px;
+      right: 0;
+      transition: linear 0.3s;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      width: 20px;
+      height: 3px;
+      background-color: #fff;
+      top: 24px;
+      right: 0;
+      transition: linear 0.2s;
+    }
+  }
+  &:hover {
+    .hamline {
+      background-color: $pink;
+      &::before,
+      &::after {
+        background-color: $pink;
+      }
+    }
+  }
+}
+
+.grid {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.row {
+  width: 25%;
+  height: 100%;
+  background-color: transparent;
+  border-right: 1px solid rgba(#fff, 0.1);
+}
+
+.arrow__icon{
+  fill: #fff;
+  width: 25px;
+  height: 25px;
+  transition: linear .2s;
+}
+
+// Social
+.social{
+  display: flex;
+}
+.social__link{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  transition: linear .2s;
+  & + .social__link{
+    margin-left: 15px;
+  }
+  &:before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+    background-color: #fff;
+    transform: scale(0);
+    z-index: -1;
+    transition: linear .2s;
+  }
+  &:hover{
+    transform: rotate(360deg);
+    &::before{
+      transform: scale(1);
+    }
+    .social__icon{
+      fill: $pink;
+    }
+  }
+}
+.social__icon{
+  display: block;
+  height: 20px;
+  fill: #fff;
+  transition: linear .2s;
 }
