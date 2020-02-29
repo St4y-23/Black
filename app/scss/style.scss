@@ -9,7 +9,7 @@
   height: auto;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 99;
 }
 .header__inner {
   display: flex;
@@ -127,17 +127,23 @@
 }
 
 // Works
-.works{
+.works,
+.work-details,
+.about{
   padding-top: 170px;
+  padding-bottom: 300px;
+  position: relative;
   .grid{
     z-index: -1;
   }
 }
 .works__item{
   display: flex;
-  margin-top: 150px;
   margin-bottom: 100px;
 
+  &:last-child{
+    margin-bottom: 0;
+  }
   &:hover{
     .works__title{
       color: $pink;
@@ -145,6 +151,9 @@
     }
     .works__slider{
       transform: scale(1.1);
+    }
+    .slick-arrow{
+      opacity: 1;
     }
   }
 }
@@ -215,7 +224,104 @@
   display: flex;
 }
 
+// work-details
+.work__image{
+  display: flex;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  max-width: 60%;
+}
 
+.work__link{
+  position: fixed;
+  top: 55%;
+  z-index: 10;
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 900;
+  padding: 0 45px;
+  a{
+    transition: ease .3s;
+  }
+  &:hover{
+    a{
+      color: $pink;
+    }
+  }
+}
+.work__link-left{
+  left: 0;
+  a{
+    transform: rotate(-90deg) ;
+    transform-origin: left top;
+  }
+}
+.work__link-right{
+  right: 0;
+  a{
+    transform: rotate(90deg) ;
+    transform-origin: right top;
+  }
+}
+
+// About
+.about__col{
+  display: flex;
+  max-width: 70%;
+  margin: 0 auto;
+}
+.about__col-img{
+  flex: 0 0 60%;
+  max-width: 60%;
+}
+.about__col-text{
+  flex: 0 0 40%;
+  max-width: 40%;
+  position: relative;
+}
+
+.about__info{
+  display: flex;
+  flex-direction: column;
+  margin-top: 25%;
+}
+.about__title{
+  font-size: rem(120);
+  color: $pink;
+  font-weight: 700;
+  margin-left: -140px;
+}
+.about__prof{
+  font-size: rem(30);
+  margin-left: 70px;
+}
+
+.about__text{
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 100px;
+  p{
+    font-size: rem(40);
+    color: rgba(#fff, .5);
+  }
+}
+
+// Contact
+.contact__link{
+  display: flex;
+  flex-direction: column;
+  font-weight: 300;
+  a:hover{
+    text-decoration: underline;
+  }
+}
+.contact__location{
+  font-size: rem(25);
+  font-weight: 900;
+  margin-top: 100px;
+  text-transform: uppercase;
+  margin-left: 70px;
+}
 
 
 
@@ -244,3 +350,4 @@
 }
 
 @import "media";
+
