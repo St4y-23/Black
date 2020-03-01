@@ -6,11 +6,44 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Black</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.2/css/animsition.css">
 	<link rel="stylesheet" href="css/libs.min.css">
 	<link rel="stylesheet" href="css/style.min.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.2/js/animsition.js"></script>
+
+	<!-- TweenMax -->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.2/gsap.min.js"></script>
+
+	<!-- AnimeJS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+	<script src="js/libs.min.js"></script>
+	<script src="js/main.js"></script>
 </head>
 
 <body>
+
+	<!-- <div class="loader">
+		<div class="loader__inner">
+			<marquee direction="right" scrollamount="10">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+				Temporibus, modi.</marquee>
+			<marquee direction="left" scrollamount="30">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+				Itaque, cupiditate?</marquee>
+			<marquee direction="right" scrollamount="20">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+				Similique, quo.</marquee>
+			<marquee direction="" scrollamount="40">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+				Ducimus, dolorem.</marquee>
+		</div>
+		<div class="intro">
+			<h1 class="intro-title">B White</h1>
+		</div>
+	</div> -->
+
+	<div class="animsition-overlay" data-animsition-overlay="true"></div>
+
 
 	<!-- Sprites -->
 	<svg style="display: none;">
@@ -97,13 +130,13 @@
 	<!-- Header -->
 	<header class="header">
 		<div class="header__inner">
-			<a class="header__logo" href="#">
+			<a class="header__logo mainPage" href="index.html">
 				<span>B</span>
 				<div class="hzline"></div>
 				white
 			</a>
 
-			<div class="nav-but-wrap">
+			<div class="nav-but-wrap mainPage">
 				<div class="menu-icon hover-target">
 					<span class="menu-icon__line menu-icon__line-left"></span>
 					<span class="menu-icon__line"></span>
@@ -119,10 +152,10 @@
 	<div class="nav">
 		<div class="nav__content">
 			<ul class="nav__list">
-				<li class="nav__list-item active-nav"><a href="index.html" class="hover-target">home</a></li>
-				<li class="nav__list-item"><a href="about.html" class="hover-target">about</a></li>
-				<li class="nav__list-item"><a href="works.html" class="hover-target">works</a></li>
-				<li class="nav__list-item"><a href="contact.html" class="hover-target">contact</a></li>
+				<li class="nav__list-item active-nav animsition-link"><a href="index.html" class="hover-target">home</a></li>
+				<li class="nav__list-item animsition-link"><a href="about.html" class="hover-target">about</a></li>
+				<li class="nav__list-item animsition-link"><a href="works.html" class="hover-target">works</a></li>
+				<li class="nav__list-item animsition-link"><a href="contact.html" class="hover-target">contact</a></li>
 			</ul>
 		</div>
 	</div>
@@ -131,16 +164,24 @@
 	<!-- FullPage -->
 	<div id="fullpage">
 
-		<div class="section s1" style="background-image: url(images/fullpage/fullpage-1.jpg)">
+		<!-- Col__bg -->
+		<div class="col__bg">
+			<div class="col__bg-item col__bg-item1"></div>
+			<div class="col__bg-item col__bg-item2"></div>
+			<div class="col__bg-item col__bg-item3"></div>
+			<div class="col__bg-item col__bg-item4"></div>
+		</div>
+
+		<div class="section s1" style="background-image: url(images/fullpage/fullpage-2.jpg)">
 
 			<div class="section__box">
-				<h3>Black.</h3> <br>
+				<h3 class="section__title">Black.</h3> <br>
 				<div class="section__text">
 					<div class="hzline"></div>
 					<span>Creative Portfolio.</span>
 				</div>
 				<div class="section__link-inner">
-					<a class="section__link" href="#">
+					<a class="section__link animsition-link" href="works.html">
 						View Project
 						<svg class="arrow__icon">
 							<use xlink:href="#arrow"></use>
@@ -159,7 +200,7 @@
 
 		</div>
 
-		<div class="section s2" style="background-image: url(images/fullpage/fullpage-2.jpg)">
+		<div class="section s2" style="background-image: url(images/fullpage/fullpage-1.jpg)">
 
 			<div class="section__box">
 				<h3>Work.</h3> <br>
@@ -168,7 +209,7 @@
 					<span>Design Inspiration.</span>
 				</div>
 				<div class="section__link-inner">
-					<a class="section__link" href="works.html">
+					<a class="section__link animsition-link" href="works.html">
 						View Project
 						<svg class="arrow__icon">
 							<use xlink:href="#arrow"></use>
@@ -196,7 +237,7 @@
 					<span>Take a New Step.</span>
 				</div>
 				<div class="section__link-inner">
-					<a class="section__link" href="#">
+					<a class="section__link animsition-link" href="works.html">
 						View Project
 						<svg class="arrow__icon">
 							<use xlink:href="#arrow"></use>
@@ -219,46 +260,31 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	<!-- Footer -->
 	<footer class="footer">
 		<div class="footer__inner">
 			<div class="footer__text">UI / UX - 2017.</div>
 			<div class="social">
 
-				<a class="social__link" href="#">
+				<a class="social__link l1" href="#">
 					<svg class="social__icon">
 						<use xlink:href="#facebook"></use>
 					</svg>
 				</a>
 
-				<a class="social__link" href="#">
+				<a class="social__link l2" href="#">
 					<svg class="social__icon">
 						<use xlink:href="#twitter"></use>
 					</svg>
 				</a>
 
-				<a class="social__link" href="#">
+				<a class="social__link l3" href="#">
 					<svg class="social__icon">
 						<use xlink:href="#google-plus"></use>
 					</svg>
 				</a>
 
-				<a class="social__link" href="#">
+				<a class="social__link l4" href="#">
 					<svg class="social__icon">
 						<use xlink:href="#linkedin"></use>
 					</svg>
@@ -271,9 +297,7 @@
 
 
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="js/libs.min.js"></script>
-	<script src="js/main.js"></script>
+
 </body>
 
 </html>

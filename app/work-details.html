@@ -6,11 +6,28 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Black</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.2/css/animsition.css">
 	<link rel="stylesheet" href="css/libs.min.css">
 	<link rel="stylesheet" href="css/style.min.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.2/js/animsition.js"></script>
+
+	<!-- TweenMax -->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.2/gsap.min.js"></script>
+
+	<!-- AnimeJS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+	<script src="js/libs.min.js"></script>
+	<script src="js/main.js"></script>
 </head>
 
 <body>
+
+	<div class="animsition-overlay" data-animsition-overlay="true"></div>
 
 	<!-- Sprites -->
 	<svg style="display: none;">
@@ -97,7 +114,7 @@
 	<!-- Header -->
 	<header class="header">
 		<div class="header__inner">
-			<a class="header__logo" href="#">
+			<a class="header__logo" href="index.html">
 				<span>B</span>
 				<div class="hzline"></div>
 				white
@@ -119,10 +136,10 @@
 	<div class="nav">
 		<div class="nav__content">
 			<ul class="nav__list">
-				<li class="nav__list-item"><a href="index.html" class="hover-target">home</a></li>
-				<li class="nav__list-item"><a href="about.html" class="hover-target">about</a></li>
-				<li class="nav__list-item active-nav"><a href="works.html" class="hover-target">works</a></li>
-				<li class="nav__list-item"><a href="contact.html" class="hover-target">contact</a></li>
+				<li class="nav__list-item animsition-link"><a href="index.html" class="hover-target">home</a></li>
+				<li class="nav__list-item animsition-link"><a href="about.html" class="hover-target">about</a></li>
+				<li class="nav__list-item active-nav animsition-link"><a href="works.html" class="hover-target">works</a></li>
+				<li class="nav__list-item animsition-link"><a href="contact.html" class="hover-target">contact</a></li>
 			</ul>
 		</div>
 	</div>
@@ -157,31 +174,15 @@
 			<div class="row"></div>
 		</div>
 
+		<!-- Col__bg -->
+		<div class="col__bg">
+			<div class="col__bg-item col__bg-item1"></div>
+			<div class="col__bg-item col__bg-item2"></div>
+			<div class="col__bg-item col__bg-item3"></div>
+			<div class="col__bg-item col__bg-item4"></div>
+		</div>
+
 	</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 	<!-- Footer -->
@@ -190,25 +191,25 @@
 			<div class="footer__text">UI / UX - 2017.</div>
 			<div class="social">
 
-				<a class="social__link" href="#">
+				<a class="social__link l1" href="#">
 					<svg class="social__icon">
 						<use xlink:href="#facebook"></use>
 					</svg>
 				</a>
 
-				<a class="social__link" href="#">
+				<a class="social__link l2" href="#">
 					<svg class="social__icon">
 						<use xlink:href="#twitter"></use>
 					</svg>
 				</a>
 
-				<a class="social__link" href="#">
+				<a class="social__link l3" href="#">
 					<svg class="social__icon">
 						<use xlink:href="#google-plus"></use>
 					</svg>
 				</a>
 
-				<a class="social__link" href="#">
+				<a class="social__link l4" href="#">
 					<svg class="social__icon">
 						<use xlink:href="#linkedin"></use>
 					</svg>
@@ -219,9 +220,7 @@
 	</footer>
 
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="js/libs.min.js"></script>
-	<script src="js/main.js"></script>
+
 </body>
 
 </html>

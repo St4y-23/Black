@@ -9,7 +9,7 @@
   height: auto;
   top: 0;
   left: 0;
-  z-index: 99;
+  z-index: 12;
 }
 .header__inner {
   display: flex;
@@ -113,6 +113,7 @@
 // Pagination fullpage
 #fp-nav{
   margin-right: 30px !important;
+  z-index: 10 !important;
 }
 
 #fp-nav ul li a span, .fp-slidesNav ul li a span{
@@ -280,6 +281,10 @@
   position: relative;
 }
 
+
+.about__img{
+  overflow: hidden;
+}
 .about__info{
   display: flex;
   flex-direction: column;
@@ -348,6 +353,9 @@
   font-size: rem(20);
   font-weight: 700;
 }
+
+
+
 
 @import "media";
 
