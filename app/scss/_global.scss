@@ -153,7 +153,6 @@ body {
   width: 40px;
   height: 40px;
   position: relative;
-  transition: linear 0.2s;
   & + .social__link {
     margin-left: 15px;
   }
@@ -171,12 +170,12 @@ body {
     transition: linear 0.2s;
   }
   &:hover {
-    transform: rotate(360deg);
     &::before {
       transform: scale(1);
     }
     .social__icon {
       fill: $pink;
+      transform: rotate(360deg);
     }
   }
 }

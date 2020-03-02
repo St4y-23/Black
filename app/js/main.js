@@ -15,6 +15,7 @@ $(function () {
     ease: Expo.easeInOut
   });
 
+  // Header gsap
   TweenMax.from(".header__logo", 1, {
     delay: 1.5,
     opacity: 0,
@@ -28,6 +29,7 @@ $(function () {
     y: +50,
     ease: Expo.easeInOut
   })
+
 
   TweenMax.from(".title", 1, {
     delay: 1.9,
@@ -43,6 +45,7 @@ $(function () {
     ease: Expo.ease
   })
 
+  // About gsap
   TweenMax.from(".about__title", 1, {
     delay: 2.2,
     opacity: 0,
@@ -63,56 +66,123 @@ $(function () {
     x: -200,
     ease: Expo.ease
   })
+
   TweenMax.from(".about__text", 1, {
     delay: 2.6,
     opacity: 0,
     y: +50,
     ease: Expo.ease
   })
-  
 
+  // Works gsap
+  TweenMax.from(".works__title-in", 1, {
+    delay: 2.2,
+    opacity: 0,
+    x: -100,
+    ease: Expo.ease
+  })
+
+  TweenMax.from(".works__text", 1, {
+    delay: 2.4,
+    opacity: 0,
+    x: -100,
+    ease: Expo.ease
+  })
+
+  TweenMax.from(".works__view-in", 1, {
+    delay: 2.6,
+    opacity: 0,
+    x: -100,
+    ease: Expo.ease
+  })
+
+  TweenMax.from(".works__slide-image", 1, {
+    delay: 2.2,
+    opacity: 0,
+    x: '-50%',
+    ease: Expo.ease
+  })
+
+  TweenMax.from(".work__link-left", 1, {
+    delay: 2.2,
+    opacity: 0,
+    x: -200,
+    ease: Expo.easeOut
+  })
+
+  TweenMax.from(".work__link-right", 1, {
+    delay: 2.2,
+    opacity: 0,
+    x: +200,
+    ease: Expo.easeOut
+  })
+
+  TweenMax.from(".work__image", 1, {
+    delay: 2.2,
+    opacity: 0,
+    y: +100,
+    ease: Expo.ease
+  })
+
+  // Contact gsap
+  TweenMax.from(".contact__img", 1, {
+    delay: 2.4,
+    opacity: 0,
+    x: -200,
+    ease: Expo.ease
+  })
+
+  TweenMax.from(".contact__location", 1, {
+    delay: 2.8,
+    opacity: 0,
+    y: +50,
+    ease: Expo.ease
+  })
+
+
+  // Footer gsap
   TweenMax.from(".footer__text", 1, {
     delay: 2.7,
     opacity: 0,
-    x: -50,
-    ease: Power2.easeInOut
+    x: -100,
+    ease: Power2.ease
   })
 
   TweenMax.from(".l1", 1, {
     delay: 2.7,
     opacity: 0,
-    y: +20,
-    ease: Power2.easeInOut
+    y: +50,
+    ease: Power2.ease
   })
 
   TweenMax.from(".l2", 1, {
     delay: 2.8,
     opacity: 0,
-    y: +20,
-    ease: Power2.easeInOut
+    y: +50,
+    ease: Power2.ease
   })
 
   TweenMax.from(".l3", 1, {
     delay: 2.9,
     opacity: 0,
-    y: +20,
-    ease: Power2.easeInOut
+    y: +50,
+    ease: Power2.ease
   })
 
   TweenMax.from(".l4", 1, {
     delay: 3,
     opacity: 0,
-    y: +20,
-    ease: Power2.easeInOut
+    y: +50,
+    ease: Power2.ease
   })
 
   // ////////////
 
-  
 
 
 
-  
+
+
 
 
 
@@ -241,7 +311,7 @@ $(function () {
   //   ease: Expo.easeInOut
   // });
 
- 
+
   TweenMax.from(".section__title", 1, {
     delay: 1.9,
     opacity: 0,
