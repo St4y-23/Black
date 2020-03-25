@@ -124,6 +124,13 @@ $(function () {
     ease: Expo.ease
   })
 
+  TweenMax.from(".slider-icon", 1, {
+    delay: 2.2,
+    opacity: 0,
+    y: +100,
+    ease: Expo.ease
+  })
+
   // Contact gsap
   TweenMax.from(".contact__img", 1, {
     delay: 2.4,
@@ -244,6 +251,8 @@ $(function () {
     infinite: true,
     speed: 500,
     fade: true,
+    autoplay: true,
+    autoplaySpeed: 7000,
     cssEase: 'ease-in',
     prevArrow: '<button type="button" class="slick-prev"><svg class="slider-icon slider-prev"><use xlink:href="#arrow"></use></svg></button>',
     nextArrow: '<button type="button" class="slick-next"><svg class="slider-icon slider-next"><use xlink:href="#arrow"></use></svg></button>',
