@@ -1,6 +1,7 @@
-$text: #000;
+$text: #fff;
+$pink: #cd14a8;
 
 
 @function rem($px) {
-  @return ($px / 16) +rem;
+  @return ($px / 18) +rem;
 }
