@@ -224,12 +224,13 @@
 }
 .works__slide{
   width: 100%;
-  display: flex;
+  display: block;
+  height: 100%;
 }
 
 // work-details
 .work__image{
-  display: flex;
+  display: block;
   margin: 0 auto;
   margin-bottom: 50px;
   max-width: 60%;
