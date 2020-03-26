@@ -1,6 +1,27 @@
 $(function () {
 
-
+// PAGE TRANSITION EFFECT
+$(document).ready(function () {
+  $(".animsition-overlay").animsition({
+    inClass: 'overlay-slide-in-top',
+    outClass: 'overlay-slide-out-top',
+    inDuration: 1500,
+    outDuration: 800,
+    linkElement: 'a:not([target="_blank"]):not([href^="#"]):not(#fp-nav ul li a):not(.lightbox):not(.send-message)',
+    loading: true,
+    loadingParentElement: 'body', //animsition wrapper element
+    loadingClass: 'animsition-loading',
+    loadingInner: '', // e.g '<img src="loading.svg" />'
+    timeout: false,
+    timeoutCountdown: 3000,
+    onLoadEvent: true,
+    browser: ['animation-duration', '-webkit-animation-duration'],
+    overlay: true,
+    overlayClass: 'animsition-overlay-slide',
+    overlayParentElement: 'body',
+    transition: function (url) { window.location.href = url; }
+  });
+});
 
   // GSAP
   TweenMax.to(".col__bg-item", 1, {
@@ -260,101 +281,83 @@ $(function () {
 
 
 
-  // PAGE TRANSITION EFFECT
-  $(".animsition-overlay").animsition({
-    inClass: 'overlay-slide-in-top',
-    outClass: 'overlay-slide-out-top',
-    inDuration: 1500,
-    outDuration: 800,
-    linkElement: 'a:not([target="_blank"]):not([href^="#"]):not(#fp-nav ul li a):not(.lightbox):not(.send-message)',
-    loading: true,
-    loadingParentElement: 'body', //animsition wrapper element
-    loadingClass: 'animsition-loading',
-    loadingInner: '', // e.g '<img src="loading.svg" />'
-    timeout: false,
-    timeoutCountdown: 10000,
-    onLoadEvent: true,
-    browser: ['animation-duration', '-webkit-animation-duration'],
-    overlay: true,
-    overlayClass: 'animsition-overlay-slide',
-    overlayParentElement: 'body',
-    transition: function (url) { window.location.href = url; }
+  
+
+
+
+    // Loader
+    // var textWrapper = document.querySelector(".intro-title");
+    // textWrapper.innerHTML = textWrapper.textContent.replace(
+    //   /([^\x00-\x80]|\w)/g,
+    //   "<span class='letter'>$&</span>"
+    // );
+
+    // anime
+    //   .timeline({ loop: false })
+    //   .add({
+    //     targets: ".intro-title .letter",
+    //     translateX: [140, 0],
+    //     translateZ: 0,
+    //     opacity: [0, 1],
+    //     easing: "easeOutExpo",
+    //     duration: 1200,  /* 1400 */
+    //     delay: function (el, i) {
+    //       return 500 + 50 * i;
+    //     }
+    //   })
+    //   .add({
+    //     targets: ".intro-title .letter",
+    //     translateX: [0, -140],
+    //     opacity: [1, 0],
+    //     easing: "easeInExpo",
+    //     duration: 600,  /* 1200 */
+    //     delay: function (el, i) {
+    //       return 700 + 50 * i;
+    //     }
+    //   });
+
+
+    // TweenMax.to(".loader", 2.2, {
+    //   delay: 3,
+    //   top: "-100%",
+    //   ease: Expo.easeInOut
+    // });
+
+
+    TweenMax.from(".section__title", 1, {
+      delay: 1.9,
+      opacity: 0,
+      y: +20,
+      ease: Power2.easeInOut
+    })
+
+    TweenMax.from(".section__text", 1, {
+      delay: 2.1,
+      opacity: 0,
+      y: +20,
+      ease: Power2.easeInOut
+    })
+
+    TweenMax.from(".section__link", 1, {
+      delay: 2.3,
+      opacity: 0,
+      y: +20,
+      ease: Power2.easeInOut
+    })
+
+    TweenMax.from("#fp-nav", 1, {
+      delay: 2.5,
+      opacity: 0,
+      x: +20,
+      ease: Power2.easeInOut
+    })
+
+
+
+
+
+
+
+
+
   });
-
-
-  // Loader
-  // var textWrapper = document.querySelector(".intro-title");
-  // textWrapper.innerHTML = textWrapper.textContent.replace(
-  //   /([^\x00-\x80]|\w)/g,
-  //   "<span class='letter'>$&</span>"
-  // );
-
-  // anime
-  //   .timeline({ loop: false })
-  //   .add({
-  //     targets: ".intro-title .letter",
-  //     translateX: [140, 0],
-  //     translateZ: 0,
-  //     opacity: [0, 1],
-  //     easing: "easeOutExpo",
-  //     duration: 1200,  /* 1400 */
-  //     delay: function (el, i) {
-  //       return 500 + 50 * i;
-  //     }
-  //   })
-  //   .add({
-  //     targets: ".intro-title .letter",
-  //     translateX: [0, -140],
-  //     opacity: [1, 0],
-  //     easing: "easeInExpo",
-  //     duration: 600,  /* 1200 */
-  //     delay: function (el, i) {
-  //       return 700 + 50 * i;
-  //     }
-  //   });
-
-
-  // TweenMax.to(".loader", 2.2, {
-  //   delay: 3,
-  //   top: "-100%",
-  //   ease: Expo.easeInOut
-  // });
-
-
-  TweenMax.from(".section__title", 1, {
-    delay: 1.9,
-    opacity: 0,
-    y: +20,
-    ease: Power2.easeInOut
-  })
-
-  TweenMax.from(".section__text", 1, {
-    delay: 2.1,
-    opacity: 0,
-    y: +20,
-    ease: Power2.easeInOut
-  })
-
-  TweenMax.from(".section__link", 1, {
-    delay: 2.3,
-    opacity: 0,
-    y: +20,
-    ease: Power2.easeInOut
-  })
-
-  TweenMax.from("#fp-nav", 1, {
-    delay: 2.5,
-    opacity: 0,
-    x: +20,
-    ease: Power2.easeInOut
-  })
-
-
-
-
-
-
-
-
-
-});
